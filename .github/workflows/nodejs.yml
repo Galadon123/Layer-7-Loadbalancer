@@ -16,13 +16,10 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '22'  # Specifies the Node.js version
+        node-version: '14'  # Specifies the Node.js version
 
     - name: Install dependencies
       run: npm install  # Installs dependencies
 
     - name: Run tests
-      run: npm test  # Runs tests (if you have any)
-
-    - name: Build project
-      run: npm run build  # Builds the project (if you have a build step)
+      run: npm test  # Runs tests using the test script in package.json
